@@ -51,13 +51,13 @@ app.use(cors({
 }));
 
 // Handle preflight requests
-app.options('*', (req, res) => {
-    res.header('Access-Control-Allow-Origin', req.headers.origin);
-    res.header('Access-Control-Allow-Methods', 'GET, POST, PUT, DELETE, OPTIONS');
-    res.header('Access-Control-Allow-Headers', 'Content-Type, Authorization, X-Requested-With');
-    res.header('Access-Control-Allow-Credentials', 'true');
-    res.status(200).send();
-});
+// app.options('*', (req, res) => {
+//     res.header('Access-Control-Allow-Origin', req.headers.origin);
+//     res.header('Access-Control-Allow-Methods', 'GET, POST, PUT, DELETE, OPTIONS');
+//     res.header('Access-Control-Allow-Headers', 'Content-Type, Authorization, X-Requested-With');
+//     res.header('Access-Control-Allow-Credentials', 'true');
+//     res.status(200).send();
+// });
 
 // Parse JSON bodies
 app.use(express.json({ limit: '10mb' }));
