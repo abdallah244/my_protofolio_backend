@@ -43,12 +43,15 @@ setTimeout(async () => {
 
 // Middlewares
 // Enable CORS
-app.use(cors({
-    origin: ['http://localhost:4200', 'http://localhost:3000', 'http://localhost:5000', 'https://my-protofolio-frontend.vercel.app' ],
-    credentials: true,
-    methods: ['GET', 'POST', 'PUT', 'DELETE', 'OPTIONS'],
-    allowedHeaders: ['Content-Type', 'Authorization', 'X-Requested-With']
-}));
+// app.use(cors({
+//     origin: ['http://localhost:4200', 'http://localhost:3000', 'http://localhost:5000', 'https://my-protofolio-frontend.vercel.app' ],
+//     credentials: true,
+//     methods: ['GET', 'POST', 'PUT', 'DELETE', 'OPTIONS'],
+//     allowedHeaders: ['Content-Type', 'Authorization', 'X-Requested-With']
+// }));
+
+// Enable CORS in general
+app.use(cors());
 
 // Handle preflight requests
 // app.options('*', (req, res) => {
